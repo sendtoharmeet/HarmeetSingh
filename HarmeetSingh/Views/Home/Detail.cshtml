@@ -1,0 +1,20 @@
+﻿@model DataContract.Person
+@{
+    ViewData["Title"] = "Contact";
+}
+<h3>Your processed data:</h3>
+
+<div class="form-group">
+    <label for="name">Name: @Model.Name</label>
+</div>
+<div class="form-group">
+    <label for="amount">Amount: @Model.Amount</label>
+</div>
+<div class="form-group">
+    <label for="amount">Amount in words: @Model.AmountText</label>
+</div>
+
+
+<div class="form-group">
+    @Html.ActionLink("Add new record", "Index", "Home")
+</div>
