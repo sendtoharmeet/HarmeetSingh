@@ -11,7 +11,7 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
-            _dataProcessor = new DataProcessor();
+            _dataProcessor = new DataProcessor(null);
         }
 
         [Test]

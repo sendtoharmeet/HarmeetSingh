@@ -1,7 +1,6 @@
 ﻿using BusinessApi;
 using HarmeetSingh.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 using Contract = DataContract;
 
@@ -10,12 +9,9 @@ namespace HarmeetSingh.Controllers
     public class HomeController : Controller
     {
         IDataProcessor _dataProcessor;
-        readonly ILogger _logger;
-
-        public HomeController(IDataProcessor dataProcessor, ILogger<HomeController> logger)
+        public HomeController(IDataProcessor dataProcessor)
         {
             _dataProcessor = dataProcessor;
-            _logger = logger;
         }
 
         public IActionResult Index()

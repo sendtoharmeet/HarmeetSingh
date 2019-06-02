@@ -48,7 +48,7 @@ namespace BusinessApi
             }
             catch (Exception ex)
             {
-                _logger.LogError(string.Format("Error while converting {0}", amount.ToString()), ex);
+                _logger?.LogError(string.Format("Error while converting {0}", amount.ToString()), ex);
                 return string.Empty;
             }
         }
