@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ResourcesLibrary;
 
 namespace BusinessApi.Helper
 {
@@ -11,22 +12,22 @@ namespace BusinessApi.Helper
 
         static Converter()
         {
-            _singleWords = new[] { "ZERO", "ONE", "TWO", "THREE", "FOUR",
-            "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "ELEVEN", "TWELVE", "THIRTEEN",
-            "FOURTEEN", "FIFTEEN", "SIXTEEN", "SEVENTEEN", "EIGHTEEN", "NINETEEN" };
+            _singleWords = new[] { Common.ZERO, Common.ONE, Common.TWO, Common.THREE, Common.FOUR,
+            Common.FIVE, Common.SIX, Common.SEVEN, Common.EIGHT, Common.NINE, Common.TEN, Common.ELEVEN, Common.TWELVE, Common.THIRTEEN, Common.FOURTEEN,
+            Common.FIFTEEN, Common.SIXTEEN, Common.SEVENTEEN, Common.EIGHTEEN, Common.NINETEEN };
 
-            _tenWords = new[] { "ZERO", "TEN", "TWENTY", "THIRTY", "FORTY",
-            "FIFTY", "SIXTY", "SEVENTY", "EIGHTY", "NINETY" };
+            _tenWords = new[] { Common.ZERO, Common.TEN, Common.TWENTY, Common.THIRTY, Common.FORTY,
+            Common.FIFTY, Common.SIXTY, Common.SEVENTY, Common.EIGHTY, Common.NINETY };
 
             constantValues = new Dictionary<string, string>();
             constantValues.Add("MINUS", "MINUS ");
-            constantValues.Add("QUADRILLION", " QUADRILLION ");
-            constantValues.Add("TRILLION", " TRILLION ");
-            constantValues.Add("BILLION", " BILLION ");
-            constantValues.Add("MILLION", " MILLION ");
-            constantValues.Add("THOUSAND", " THOUSAND ");
-            constantValues.Add("HUNDRED", " HUNDRED ");
-            constantValues.Add("AND", "AND ");
+            constantValues.Add("QUADRILLION", " " + Common.QUADRILLION + " ");
+            constantValues.Add("TRILLION", " " + Common.TRILLION + " ");
+            constantValues.Add("BILLION", " " + Common.BILLION + " ");
+            constantValues.Add("MILLION", " " + Common.MILLION + " ");
+            constantValues.Add("THOUSAND", " " + Common.THOUSAND + " ");
+            constantValues.Add("HUNDRED", " " + Common.HUNDRED + " ");
+            constantValues.Add("AND", Common.AND + " ");
         }
 
         public static string ConvertNumberToWords(this Int64 inputNumber)

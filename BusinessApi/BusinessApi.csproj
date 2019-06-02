@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataContract\DataContract.csproj" />
+    <ProjectReference Include="..\ResourcesLibrary\ResourcesLibrary.csproj" />
   </ItemGroup>
 
 </Project>
